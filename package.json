@@ -1,0 +1,61 @@
+{
+  "name": "coding-made-easy",
+  "displayName": "Coding Made Easy",
+  "publisher": "AayushAnand",
+  "description": "It helps you to type your custom defined functions in seconds",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.101.0"
+  },
+  "categories": [
+    "Other",
+    "Snippets"
+  ],
+  "activationEvents": [
+    "onCommand: extension.loadSnippets",
+    "onLanguage: cpp"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.loadSnippets",
+        "title": "Initialise Snippet Repo"
+      },
+      {
+        "command": "extension.insertSnippetFromGitHub",
+        "title": "Insert Snippet from GitHub"
+      }
+    ],
+    "languages": [
+      {
+        "id": "cpp",
+        "aliases": [
+          "C++",
+          "cpp"
+        ],
+        "extensions": [
+          ".cpp",
+          ".h"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ]
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "20.x",
+    "@types/vscode": "^1.101.0",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.5.2",
+    "eslint": "^9.25.1"
+  },
+  "dependencies": {
+    "node-fetch": "^2.7.0"
+  }
+}
