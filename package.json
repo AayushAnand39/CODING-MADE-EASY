@@ -2,7 +2,7 @@
   "name": "coding-made-easy",
   "displayName": "Coding Made Easy",
   "publisher": "AayushAnand",
-  "description": "It helps you to type your custom defined functions in seconds",
+  "description": "Type your custom defined functions in seconds",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.101.0"
@@ -12,19 +12,22 @@
     "Snippets"
   ],
   "activationEvents": [
-    "onCommand: extension.loadSnippets",
-    "onLanguage: cpp"
+    "onCommand: extension.createSnippet",
+    "onLanguage: cpp",
+    "onLanguage: javascript",
+    "onLanguage: python",
+    "onLanguage: java",
+    "onLanguage: c",
+    "onLanguage: csharp",
+    "onLanguage: go",
+    "onLanguage: ruby"
   ],
   "main": "./extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "extension.loadSnippets",
-        "title": "Initialise Snippet Repo"
-      },
-      {
-        "command": "extension.insertSnippetFromGitHub",
-        "title": "Insert Snippet from GitHub"
+        "command": "extension.createSnippet",
+        "title": "Create or Edit Snippet..."
       }
     ],
     "languages": [
@@ -37,6 +40,77 @@
         "extensions": [
           ".cpp",
           ".h"
+        ],
+        "configuration": "./language-configuration.json"
+      },
+      {
+        "id": "javascript",
+        "aliases": [
+          "JavaScript"
+        ],
+        "extensions": [
+          ".js"
+        ],
+        "configuration": "./language-configuration.json"
+      },
+      {
+        "id": "python",
+        "aliases": [
+          "Python"
+        ],
+        "extensions": [
+          ".py"
+        ],
+        "configuration": "./language-configuration.json"
+      },
+      {
+        "id": "java",
+        "aliases": [
+          "Java"
+        ],
+        "extensions": [
+          ".java"
+        ],
+        "configuration": "./language-configuration.json"
+      },
+      {
+        "id": "c",
+        "aliases": [
+          "C"
+        ],
+        "extensions": [
+          ".c",
+          ".h"
+        ],
+        "configuration": "./language-configuration.json"
+      },
+      {
+        "id": "csharp",
+        "aliases": [
+          "C#"
+        ],
+        "extensions": [
+          ".cs"
+        ],
+        "configuration": "./language-configuration.json"
+      },
+      {
+        "id": "go",
+        "aliases": [
+          "Go"
+        ],
+        "extensions": [
+          ".go"
+        ],
+        "configuration": "./language-configuration.json"
+      },
+      {
+        "id": "ruby",
+        "aliases": [
+          "Ruby"
+        ],
+        "extensions": [
+          ".rb"
         ],
         "configuration": "./language-configuration.json"
       }
@@ -56,6 +130,6 @@
     "eslint": "^9.25.1"
   },
   "dependencies": {
-    "node-fetch": "^2.7.0"
+    "node-fetch": "^3.3.2"
   }
 }

@@ -3,32 +3,28 @@
 ---
 
 ## Description
-Coding Made Easy is an extension which helps in completion of your large custom designed functions or classes by just typing a small keyword and letting the VS Code suggestion do the rest of the work.
+Coding Made Easy is an extension which helps in completion of your large custom designed functions, classes and templates by just typing a small keyword and letting the VS Code suggestion do the rest of the work.
 
 ---
 
 ## How to Extract the Benefits of the Extension?
 1. Install the Extension from the extensions area.
-2. Make sure that you have a Github repository where you have stored all your required functions and classes in different files.
-3. After the installation of the extension, press Ctrl + Shift + P and click on Initialise Snippet Repo.
-4. It will ask you for a repository link, please do enter the same in the given area.
-5. Click on Enter to initialise the repository.
-6. The repository is now initialised and you can now start typing the large code snippets by just using a keyword.
+2. After the installation of the extension, press Ctrl + Shift + P and click on Create Or Edit Snippet.
+3. It will first ask you to choose your preferred programming language.
+4. After that it asks for the name of the keyword.
+5. After you hit enter, a page opens up where you can type your code snippet and click on Save Changes in the pop up which shows on the bottom right corner.
+6. If you enter an existing keyword name, i.e. the one which you have already created, a file opens up with the pre-written snippet which can be edited and changes can be saved. 
 
 ---
 
 ## Example Use Case of this Extension
-1. Consider a sample repo - https://github.com/user/repo containing a file named DSU.cpp which contains a basic boilerplate of the Disjoint Set Union Class.
-2. Initialise the repo as stated earlier.
-3. After the repo is initialised, open any .cpp file and just type the keyword 'dsu', you will receive a suggestion to add the DSU.cpp code into the current editor.
-4. Click on Enter to add the code snippet.
-
----
-
-## Important Points to be noted while using this extension
-1. Extension currently supports only .cpp codes. 
-2. If you have initialised your repo, you will not have to do it again unless and until you have made changes in your repo.
-3. Make sure to have meaningful file names in your repo as it will be used as the corresponding keyword.
+1. After installation, press Ctrl + Shift + P.
+2. Click on Create Or Edit Snippet.
+3. It asks you for a language. Let us select cpp for example.
+4. Then it will ask for a keyword. Let us enter 'dsu' for example.
+5. A file opens up where we will type the DSU code and hit on Save Changes showing up on the bottom right corner.
+6. Your code is saved now as a snippet and can be used anytime when you open VS code.
+7. If you want to make edits to the snippet, follow the same process, type the same keyword, update the file and hit on Save Changes.
 
 ---
 
